@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka Comfy:pixelsize=19:antialias=true:autohint=true:weight=semibold";
+static char *font = "RobotoMono Nerd Font:pixelsize=19:antialias=true:autohint=true:weight=semibold";
 static int borderpx = 0;
 
 /*
