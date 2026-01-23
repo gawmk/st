@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "RobotoMono Nerd Font:pixelsize=19:antialias=true:autohint=true:weight=semibold";
+static char *font = "IosevkaComfy Nerd Font:pixelsize=19:antialias=true:autohint=true:weight=semibold";
 static int borderpx = 0;
 
 /*
@@ -92,6 +92,9 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
+
+/* bg opacity */
+float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -193,8 +196,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.f = -0.1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.f = -0.1} },
+	{ ControlMask|Mod1Mask, XK_k,           kscrollup,      {.f = -0.1} },
+	{ ControlMask|Mod1Mask, XK_j,           kscrolldown,    {.f = -0.1} },
 };
 
 /*
